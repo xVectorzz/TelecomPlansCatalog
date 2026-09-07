@@ -3,7 +3,10 @@ package com.vma.telecom_plans_catalog;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 
 import java.util.Objects;
 
@@ -12,8 +15,11 @@ public class TelecomPlan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message = "The plan name is mandatory")
     private String name;
+    @Positive(message = "The price must be greater than zero")
     private Double price;
+    @Positive(message = "The Gb must be greater than zero")
     private Integer dataGb;
 
     public TelecomPlan() {
