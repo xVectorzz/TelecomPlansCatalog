@@ -1,0 +1,10 @@
+services:
+  db:
+    container_name: mysql-spring-boot
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: telecom_planes
+    ports:
+      - "3307:3306"
+    restart: unless-stopped

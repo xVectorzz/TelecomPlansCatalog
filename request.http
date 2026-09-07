@@ -1,0 +1,30 @@
+### GET request to example server
+GET http://localhost:8081/api/v1/plan
+
+###
+POST http://localhost:8081/api/v1/plan
+Content-Type: application/json
+
+{
+  "name": "Ultra",
+  "price": 100,
+  "dataGb": 60
+}
+###
+POST http://localhost:8081/api/v1/plan
+Content-Type: application/json
+
+{
+  "name": "Pro",
+  "price": 50,
+  "dataGb": 30
+}
+###
+POST http://localhost:8081/api/v1/plan
+Content-Type: application/json
+
+{
+  "name": "Basic",
+  "price": 17.50,
+  "dataGb": 10
+}
